@@ -25,9 +25,10 @@ public class PoseInstructions : MonoBehaviour
         public string[] steps;
 
     }
+
     public string lockFilePath = "C:\\Users\\nikes\\OneDrive\\Documents\\yogatrainer-main\\lock.txt";
 
-    public string jsonFilePath = "C:\\Users\\nikes\\OneDrive\\Documents\\GitHub\\YogaSimple\\Assets\\Json\\Pose_Data.json";
+    public string jsonFilePath = "/Users/nikeshniki/Documents/GitHub/Yoga_Project_CPS_595/Assets/Json/Pose_Data.json";
 
     public float updateInterval = 2.0f; // Update every 2 seconds (adjust as needed)
 
@@ -61,7 +62,7 @@ public class PoseInstructions : MonoBehaviour
         {
             LoadJSONData();
         }
-
+        Debug.Log(poseData.steps);
         // Access and use the JSON data as needed
         if (poseData != null)
         {
