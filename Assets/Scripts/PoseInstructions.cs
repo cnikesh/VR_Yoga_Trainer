@@ -10,7 +10,11 @@ using System.Linq;
 public class PoseInstructions : MonoBehaviour
 {
     public GameObject scoreText;
-    public TextMeshProUGUI text;
+    private TextMeshProUGUI text;
+
+    public GameObject scoreNumber;
+    private TextMeshProUGUI scoreNumberText;
+
     //public TextAsset jsonData;
     PoseData poseData = new PoseData();
 
@@ -43,6 +47,7 @@ public class PoseInstructions : MonoBehaviour
         LoadJSONData();
 
         text = scoreText.GetComponent<TextMeshProUGUI>();
+        scoreNumberText = scoreNumber.GetComponent<TextMeshProUGUI>();
 
         animator = girl.GetComponent<Animator>();
 
@@ -62,10 +67,11 @@ public class PoseInstructions : MonoBehaviour
         {
             LoadJSONData();
         }
-        Debug.Log(poseData.steps);
+        Debug.Log(poseData.score);
         // Access and use the JSON data as needed
         if (poseData != null)
         {
+            scoreNumberText.text = "Score: "+poseData.score;
             string stepText = "";
 
             for (int i = 8; i < poseData.steps.Length; i++)

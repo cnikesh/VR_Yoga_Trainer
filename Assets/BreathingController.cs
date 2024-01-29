@@ -16,6 +16,7 @@ public class BreathingController : MonoBehaviour
     void Start()
     {
         animator = girl.GetComponent<Animator>();
+        timer.SetActive(false);
     }
 
     // Update is called once per frame
