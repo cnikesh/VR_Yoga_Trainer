@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MenuToSceneCoordinator : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -12,6 +14,11 @@ public class MenuToSceneCoordinator : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    public void loadScene(string sceneName)
     {
         
     }
